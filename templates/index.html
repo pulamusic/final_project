@@ -1,49 +1,27 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "layout.html" %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-
-    <!-- local stylesheet -->
-    <link rel="stylesheet" href="../static/styles.css">
-
-    <title>Fixer Currency App</title>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid">
-      <h1>Fixer Currency Converter</h1>
-    </div>
-
-    <div class="container">
-      <form id="form">
-        <select name="base-currency" id="base-currency-dropdown"></select>
-        <input id="currency-amount" autocomplete="off" autofocus placeholder="Amount" type="number">
-        <select name="target-currency" id="target-currency-dropdown"></select>
-        <br>
-        <button type="submit" id="submit">Get Exchange Rate</button>
-      </form>
+{% block body %}
+  <div class="container">
+    <form action="#" method="post" name="curreny-converter" id="currency-form">
+      <select name="json-call" id="json-call">
+        <option value="latest">Latest Rate</option>
+        <option value="historical">Historical Rate</option>
+      </select>
       <br>
-      <div id="result"></div>
-    </div>
+      <select name="base-currency" id="base-currency-dropdown"></select>
+      <br>
+      <input id="currency-amount" autocomplete="off" autofocus placeholder="Amount" type="number">
+      <br>
+      <select name="target-currency" id="target-currency-dropdown"></select>
+      <br>
+      <button type="submit" id="submit">Get Exchange Rate</button>
+    </form>
+    <br>
+    <div id="result"></div>
+  </div>
 
-    <div class="container">
-      <select id="locality-dropdown" name="locality"></select>
-    </div>
+  <div class="container">
+    <select id="locality-dropdown" name="locality"></select>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- local scripts -->
-    <script src="../static/index.js"></script>
-    <script src="..static/dropdown.js"></script>
-  </body>
-</html>
+{% endblock %}
