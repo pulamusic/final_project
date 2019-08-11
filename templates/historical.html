@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <div class="container">
+    <form action="#" method="post" name="curreny-converter" id="currency-form">
+      <legend>Historical Currency Exchange</legend>
+      <br>
+      <select name="base-currency" id="base-currency-dropdown"></select>
+      <input id="currency-amount" autocomplete="off" autofocus placeholder="Amount" type="number">
+      <select name="target-currency" id="target-currency-dropdown"></select>
+      <input type="date" placeholder="MM/DD/YYYY">
+      <br>
+      <button type="submit" id="submit">Get Exchange Rate</button>
+    </form>
+    <br>
+    <div id="result"></div>
+  </div>
+
+  <div class="container">
+    <select id="locality-dropdown" name="locality"></select>
+  </div>
+
+  <!-- local script -->
+  <script src="../static/historical.js"></script>
+
+{% endblock %}
