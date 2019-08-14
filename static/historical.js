@@ -2,10 +2,10 @@
 endpoint = 'historical'
 access_key = 'CURRENCYLAYER_API_KEY'
 
-// define from currency, to currency, and amount
-from = 'EUR'
-to = 'GBP'
-amount = '10'
+// define from currency, to currency, amount, and date
+from = input.baseCurrency
+to = input.targetCurrency
+amount = input.amount
 date = input.date
 
 // execute the conversion using the "convert" endpoint:

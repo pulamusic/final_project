@@ -4,9 +4,9 @@ $(document).ready(function() {
   access_key = 'CURRENCYLAYER_API_KEY';
 
   // define from currency, to currency, and amount
-  from = 'EUR'
-  to = 'GBP'
-  amount = '10'
+  from = input.baseCurrency
+  to = input.targetCurrency
+  amount = input.amount
 
   // execute the conversion using the "convert" endpoint:
   $.ajax({
