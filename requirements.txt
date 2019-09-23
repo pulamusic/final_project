@@ -58,5 +58,5 @@ submit50==2.4.13
 termcolor==1.1.0
 urllib3==1.24.2
 wcwidth==0.1.7
-Werkzeug==0.14.1
+werkzeug>=0.15.3
 zipp==0.5.1
