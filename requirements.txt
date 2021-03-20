@@ -26,7 +26,7 @@ idna==2.8
 importlib-metadata==0.18
 itsdangerous==1.1.0
 jellyfish==0.7.2
-Jinja2==2.10.1
+Jinja2==2.11.3
 lib50==1.1.5
 libgravatar==0.2.3
 MarkupSafe==1.1.0
